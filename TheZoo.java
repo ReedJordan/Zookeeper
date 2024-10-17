@@ -1,7 +1,5 @@
 import java.util.Random;
-import java.time.LocalTime;
 import java.util.Scanner;
-import java.io.File;
 
 /*
 * Zookeeping Project, parts 1 and 2
@@ -12,26 +10,21 @@ import java.io.File;
 
 public class Zookeeper{
     public static void main (String[] args){
-        
-        String aniType = "Pengiun";
-        
-        Random rand = new Random();
-        double temp = rand.nextDouble();
-        int temp1 = rand.nextInt(100);
-        double fullTemp = temp + temp1;
-        
-        LocalTime currentTime = LocalTime.now();
-        
         Scanner input = new Scanner(System.in);
-        
+
+        System.out.println("Please enter a number for the animal you want to view: "+
+                "\n1: Penguin \n2: Spider \n3: Bat \n4: Lion \n \n>");
+
+        int aniNumber = input.nextInt();
+
+        Random rand = new Random();
+        double temp = rand.nextDouble(0,100);
+        if (aniNumber == 1){
+
+        System.out.println("Switching cameras...");
         System.out.println("Animal Type: "+ aniType);
-        System.out.println("Current Time: "+ currentTime);
-        System.out.printf("Habitat Temperature: %.2f"+ fullTemp +"F");
-        
-        System.out.println("Do you want to see the "+ aniType +"s?");
-        String aniAns = input.nextLine();
-        System.out.println("Here you go!");
-        System.out.println("");
+        System.out.printf("Habitat Temperature: %.2f"+ temp +"F");
+
         
         File file = new File("penguin.txt");
         try{
@@ -40,8 +33,6 @@ public class Zookeeper{
                 String i = fr.nextLine();
                 System.out.println(i);
             }
-        } catch (Exception e){
-            System.out.println("The animal has escaped. No file found.");
         }
         
         System.out.println("\n Wow, what a cute "+ aniType +".");
