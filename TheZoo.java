@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.io.File;
 
 /*
-* Zookeeping Project, part 3
+* Zookeeping Project, tasks 3 and 4
 *
 * @ Reed Jordan
 * AP Comp Sci A w/ Mr. Smith, Period 4
@@ -34,6 +34,13 @@ public class Zookeeper{
         }   
         if (aniNumber == 4){
             aniType = "Lion";
+        }
+        if (aniNumber == -1){
+            System.exit(0);
+        }
+        if (aniNumber == 69){
+            System.out.println("Nice");
+            System.exit(0);
         }
         
         
@@ -98,6 +105,8 @@ public class Zookeeper{
         
         
         System.out.println("\n Wow, what a cute "+ aniType +".");
+        System.out.println("To view another animal, please restart the watcher."+
+        "\n To quit, enter the value -1");
         
     }
 }
