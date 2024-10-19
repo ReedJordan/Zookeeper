@@ -23,24 +23,11 @@ public class Zookeeper{
         
         String aniType = null;
         
-        if (aniNumber == 1){
-            aniType = "Penguin";
-        }
-        if (aniNumber == 2){
-            aniType = "Spider";
-        }   
-        if (aniNumber == 3){
-            aniType = "Bat";
-        }   
-        if (aniNumber == 4){
-            aniType = "Lion";
-        }
-        if (aniNumber == -1){
-            System.exit(0);
-        }
-        if (aniNumber == 69){
-            System.out.println("Nice");
-            System.exit(0);
+        switch (aniNumber){
+            case 1: aniType = "Penguin"; break;
+            case 2: aniType = "Spider"; break;
+            case 3: aniType = "Bat"; break;
+            case 4: aniType = "Lion"; break;
         }
         
         
@@ -49,7 +36,7 @@ public class Zookeeper{
         System.out.printf("Habitat Temperature: %.2f", temp);
         System.out.println("\n");
 
-        if (aniNumber == 1){
+        if (aniType.equals("Penguin")){
             File file = new File("penguin.txt");
             try{
                 Scanner fr = new Scanner(file);
@@ -62,7 +49,7 @@ public class Zookeeper{
             }
         }
         
-        if (aniNumber == 2){
+        if (aniType.equals("Spider")){
             File file = new File("spider.txt");
             try{
                 Scanner fr = new Scanner(file);
@@ -75,7 +62,7 @@ public class Zookeeper{
             }
         }
         
-        if (aniNumber == 3){
+        if (aniType.equals("Bat")){
             File file = new File("bat.txt");
             try{
                 Scanner fr = new Scanner(file);
@@ -88,7 +75,7 @@ public class Zookeeper{
             }
         }
         
-        if (aniNumber == 4){
+        if (aniType.equals("Lion")){
             File file = new File("lion.txt");
             try{
                 Scanner fr = new Scanner(file);
@@ -104,9 +91,9 @@ public class Zookeeper{
         
         
         
-        System.out.println("\n Wow, what a cute "+ aniType +".");
+        System.out.println("\n\nWow, what a cute "+ aniType +".");
         System.out.println("To view another animal, please restart the watcher."+
-        "\n To quit, enter the value -1");
+        "\nTo quit, enter the value -1");
         
     }
 }
