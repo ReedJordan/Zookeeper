@@ -29,6 +29,9 @@ public class Zookeeper{
             case 3: aniType = "Bat"; break;
             case 4: aniType = "Lion"; break;
         }
+        if (aniNumber == -1){
+            System.exit(0);
+        }
         
         
         System.out.println("\nSwitching cameras...");
