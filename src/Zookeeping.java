@@ -9,7 +9,7 @@ import java.io.File;
 * AP Comp Sci A w/ Mr. Smith, Period 4
 */
 
-public class Zookeeper{
+public class Zookeeping{
     public static void main (String[] args){
         Scanner input = new Scanner(System.in);
 
