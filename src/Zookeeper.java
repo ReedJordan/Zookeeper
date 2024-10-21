@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.io.File;
 
 /*
-* Zookeeping Project, tasks 3 and 4
+* Zookeeper Project, tasks 3 and 4
 *
 * @ Reed Jordan
 * AP Comp Sci A w/ Mr. Smith, Period 4
@@ -37,7 +37,7 @@ public class Zookeeper{
         System.out.println("\nSwitching cameras...");
         System.out.println("Animal Type: "+ aniType);
         System.out.printf("Habitat Temperature: %.2f", temp);
-        System.out.println("\n");
+        System.out.println("F\n");
 
         if (aniType.equals("Penguin")){
             File file = new File("penguin.txt");
